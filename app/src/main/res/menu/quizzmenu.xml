@@ -10,7 +10,7 @@
         app:showAsAction="always" />
     <item
         android:id="@+id/menuSettings"
-        android:title="Paramètres"
+        android:title="Règles"
         app:showAsAction="never" />
     <item
         android:id="@+id/menuQuit"

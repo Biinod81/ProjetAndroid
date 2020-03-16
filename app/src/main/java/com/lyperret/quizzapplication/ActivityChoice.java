@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -24,7 +25,7 @@ public class ActivityChoice extends AppCompatActivity {
         setContentView(R.layout.layout_activity_choice);
 
         //création de la liste déroulante
-        Spinner spinner = (Spinner) findViewById(R.id.spinnerTheme);
+        Spinner spinner = findViewById(R.id.spinnerTheme);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.theme,android.R.layout.simple_spinner_item);
 
@@ -42,15 +43,39 @@ public class ActivityChoice extends AppCompatActivity {
                 if (pseudo.getText().toString().equals("")) {
                     Toast.makeText(getApplicationContext(),"Veuillez entrer un pseudo.",Toast.LENGTH_SHORT).show();
                 } else {
-                    startActivity(new Intent(ActivityChoice.this, ActivityPlay.class));
+                    Intent intent = new Intent(ActivityChoice.this, ActivityPlay.class);
+                    intent.putExtra();
                 }
             }
         });
     }
 
-    @Override
-    public void onBackPressed() {
+    //on regarde quelle difficulté est sélectionnée par le joueur
+    public String onRadioButtonClicked(View view){
+        String difficulte;
+        boolean checked = ((RadioButton) view).isChecked();
 
+        switch(view.getId()){
+            case R.id.radioButton_facile:
+                if(checked){
+                    difficulte = "facile";
+                }
+                break;
+            case R.id.radioButton_normal:
+                if(checked){
+                    difficulte = "moyen";
+                }
+                break;
+            case R.id.radioButton_difficile:
+                if(checked){
+                    difficulte = "difficile";
+                }
+                break;
+            default:
+                difficulte = "facile";
+                break;
+        }
+        return difficulte;
     }
 
     @Override
@@ -58,5 +83,11 @@ public class ActivityChoice extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.quizzmenu,menu);
         return true;
+    }
+
+    //annule le retour arrière
+    @Override
+    public void onBackPressed() {
+
     }
 }
