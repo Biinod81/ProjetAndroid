@@ -2,9 +2,9 @@
     <string name="app_name">Quizz Application</string>
     <string-array name="theme">
         <item>Animaux</item>
-        <item>Planète</item>
-        <item>Cuisine</item>
-        <item>Zoo</item>
+        <item>Sciences et Tech</item>
+        <item>Histoire</item>
+        <item>Musique</item>
     </string-array>
 
 </resources>

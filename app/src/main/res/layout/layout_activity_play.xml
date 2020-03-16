@@ -1,9 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas..com/apk/res-auto"
+    xmlns:app2="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ActivityPlay">
 
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="334dp"
+        android:layout_height="298dp"
+        android:text="TextView"
+        app2:layout_constraintBottom_toBottomOf="parent"
+        app2:layout_constraintEnd_toEndOf="parent"
+        app2:layout_constraintHorizontal_bias="0.493"
+        app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toTopOf="parent"
+        app2:layout_constraintVertical_bias="0.177" />
+
+    <Button
+        android:id="@+id/btnFaux"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FAUX"
+        app2:layout_constraintBottom_toBottomOf="parent"
+        app2:layout_constraintEnd_toStartOf="@+id/btnVrai"
+        app2:layout_constraintHorizontal_bias="0.574"
+        app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toBottomOf="@+id/question"
+        app2:layout_constraintVertical_bias="0.492" />
+
+    <Button
+        android:id="@+id/btnVrai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="96dp"
+        android:text="VRAI"
+        app2:layout_constraintBottom_toBottomOf="parent"
+        app2:layout_constraintEnd_toEndOf="parent"
+        app2:layout_constraintTop_toBottomOf="@+id/question"
+        app2:layout_constraintVertical_bias="0.492" />
 </androidx.constraintlayout.widget.ConstraintLayout>
