@@ -27,12 +27,16 @@ public class ActivityPlay extends AppCompatActivity {
         //this.selectData();
         suivant = findViewById(R.id.suivant);
         suivant.setVisibility(View.INVISIBLE);
+
+        //récupération de la difficulté et du thème choisi
+        String difficulte = getIntent().getStringExtra("difficulte");
+        String theme = getIntent().getStringExtra("theme");
+        Toast.makeText(getApplicationContext(),difficulte+" et "+theme,Toast.LENGTH_LONG).show();
     }
 
+    //annule le retour arrière
     @Override
-    public void onBackPressed() {
-
-    }
+    public void onBackPressed(){}
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){

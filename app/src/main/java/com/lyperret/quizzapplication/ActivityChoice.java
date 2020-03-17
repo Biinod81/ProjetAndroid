@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,24 +16,39 @@ import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import java.lang.reflect.Array;
-import java.nio.charset.Charset;
-
 public class ActivityChoice extends AppCompatActivity {
+
+    String difficulte = "Facile";
+    String themeChoisi = "Animaux";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_activity_choice);
 
-        //création de la liste déroulante
-        Spinner spinner = findViewById(R.id.spinnerTheme);
-
+        //création de la liste déroulante pour les thèmes
+        final Spinner spinner = findViewById(R.id.spinnerTheme);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.theme,android.R.layout.simple_spinner_item);
-
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
         spinner.setAdapter(adapter);
+
+        //affiche + récupère le thème choisis
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selectedItemText = (String) parent.getItemAtPosition(position);
+                // Notify the selected item text
+                Toast.makeText
+                        (getApplicationContext(), "Selected : " + selectedItemText, Toast.LENGTH_SHORT)
+                        .show();
+                themeChoisi = selectedItemText;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
 
         //Passe à l'activité ActivityPlay
         Button BTN_Start = findViewById(R.id.BTN_Play);
@@ -44,38 +61,12 @@ public class ActivityChoice extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Veuillez entrer un pseudo.",Toast.LENGTH_SHORT).show();
                 } else {
                     Intent intent = new Intent(ActivityChoice.this, ActivityPlay.class);
-                    intent.putExtra();
+                    intent.putExtra("difficulte",difficulte);
+                    intent.putExtra("theme", themeChoisi);
+                    startActivity(intent);
                 }
             }
         });
-    }
-
-    //on regarde quelle difficulté est sélectionnée par le joueur
-    public String onRadioButtonClicked(View view){
-        String difficulte;
-        boolean checked = ((RadioButton) view).isChecked();
-
-        switch(view.getId()){
-            case R.id.radioButton_facile:
-                if(checked){
-                    difficulte = "facile";
-                }
-                break;
-            case R.id.radioButton_normal:
-                if(checked){
-                    difficulte = "moyen";
-                }
-                break;
-            case R.id.radioButton_difficile:
-                if(checked){
-                    difficulte = "difficile";
-                }
-                break;
-            default:
-                difficulte = "facile";
-                break;
-        }
-        return difficulte;
     }
 
     @Override
@@ -85,9 +76,50 @@ public class ActivityChoice extends AppCompatActivity {
         return true;
     }
 
+    //Affiche + récupère la difficulté sélectionnée
+    public void onRadioButtonClicked(View view){
+        boolean checked = ((RadioButton) view).isChecked();
+        switch(view.getId()){
+            case R.id.radioButton_facile:
+                if(checked){
+                    this.difficulte = "facile";
+                    Toast.makeText(getApplicationContext(),"Vous avez choisis la difficulté : "+difficulte,Toast.LENGTH_SHORT).show();
+                }
+                break;
+            case R.id.radioButton_moyen:
+                if(checked){
+                    this.difficulte = "moyen";
+                    Toast.makeText(getApplicationContext(),"Vous avez choisis la difficulté : "+difficulte,Toast.LENGTH_SHORT).show();
+                }
+                break;
+            case R.id.radioButton_difficile:
+                if(checked){
+                    this.difficulte = "difficile";
+                    Toast.makeText(getApplicationContext(),"Vous avez choisis la difficulté : "+difficulte,Toast.LENGTH_SHORT).show();
+                }
+                break;
+            default:
+                this.difficulte = "facile";
+                break;
+        }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()){
+            case R.id.menuRules:
+                Toast.makeText(this,"Règles",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(ActivityChoice.this,ActivityRules.class));
+                return true;
+            case R.id.menuQuit:
+                Toast.makeText(this,"Quitter",Toast.LENGTH_SHORT).show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
     //annule le retour arrière
     @Override
-    public void onBackPressed() {
-
-    }
+    public void onBackPressed(){}
 }

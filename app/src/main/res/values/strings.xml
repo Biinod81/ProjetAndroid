@@ -2,9 +2,10 @@
     <string name="app_name">Quizz Application</string>
     <string-array name="theme">
         <item>Animaux</item>
-        <item>Sciences et Tech</item>
+        <item>SciencesEtTech</item>
         <item>Histoire</item>
         <item>Musique</item>
     </string-array>
+
 
 </resources>

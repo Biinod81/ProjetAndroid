@@ -9,7 +9,7 @@
         android:icon="@drawable/home"
         app:showAsAction="always" />
     <item
-        android:id="@+id/menuSettings"
+        android:id="@+id/menuRules"
         android:title="Règles"
         app:showAsAction="never" />
     <item
