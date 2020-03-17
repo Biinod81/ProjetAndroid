@@ -3,6 +3,7 @@ package com.lyperret.quizzapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -18,8 +19,8 @@ import android.widget.Toast;
 
 public class ActivityChoice extends AppCompatActivity {
 
-    String difficulte = "Facile";
-    String themeChoisi = "Animaux";
+    String difficulte="Facile";
+    String themeChoisi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +33,7 @@ public class ActivityChoice extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
-        //affiche + récupère le thème choisis
+        //récupération du thème sélectionné
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -62,7 +63,7 @@ public class ActivityChoice extends AppCompatActivity {
                 } else {
                     Intent intent = new Intent(ActivityChoice.this, ActivityPlay.class);
                     intent.putExtra("difficulte",difficulte);
-                    intent.putExtra("theme", themeChoisi);
+                    intent.putExtra("theme",themeChoisi);
                     startActivity(intent);
                 }
             }
@@ -76,25 +77,25 @@ public class ActivityChoice extends AppCompatActivity {
         return true;
     }
 
-    //Affiche + récupère la difficulté sélectionnée
+    //Récupération de la difficulté sélectionné
     public void onRadioButtonClicked(View view){
         boolean checked = ((RadioButton) view).isChecked();
         switch(view.getId()){
             case R.id.radioButton_facile:
                 if(checked){
-                    this.difficulte = "facile";
+                    this.difficulte = "Facile";
                     Toast.makeText(getApplicationContext(),"Vous avez choisis la difficulté : "+difficulte,Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.radioButton_moyen:
                 if(checked){
-                    this.difficulte = "moyen";
+                    this.difficulte = "Moyen";
                     Toast.makeText(getApplicationContext(),"Vous avez choisis la difficulté : "+difficulte,Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.radioButton_difficile:
                 if(checked){
-                    this.difficulte = "difficile";
+                    this.difficulte = "Difficile";
                     Toast.makeText(getApplicationContext(),"Vous avez choisis la difficulté : "+difficulte,Toast.LENGTH_SHORT).show();
                 }
                 break;

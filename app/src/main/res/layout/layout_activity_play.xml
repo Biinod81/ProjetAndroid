@@ -9,15 +9,14 @@
 
     <TextView
         android:id="@+id/question"
-        android:layout_width="334dp"
-        android:layout_height="298dp"
+        android:layout_width="339dp"
+        android:layout_height="100dp"
         android:text="TextView"
         app2:layout_constraintBottom_toBottomOf="parent"
         app2:layout_constraintEnd_toEndOf="parent"
-        app2:layout_constraintHorizontal_bias="0.493"
         app2:layout_constraintStart_toStartOf="parent"
         app2:layout_constraintTop_toTopOf="parent"
-        app2:layout_constraintVertical_bias="0.177" />
+        app2:layout_constraintVertical_bias="0.067" />
 
     <Button
         android:id="@+id/btnFaux"
@@ -26,30 +25,43 @@
         android:text="FAUX"
         app2:layout_constraintBottom_toBottomOf="parent"
         app2:layout_constraintEnd_toStartOf="@+id/btnVrai"
-        app2:layout_constraintHorizontal_bias="0.574"
+        app2:layout_constraintHorizontal_bias="0.659"
         app2:layout_constraintStart_toStartOf="parent"
         app2:layout_constraintTop_toBottomOf="@+id/question"
-        app2:layout_constraintVertical_bias="0.492" />
+        app2:layout_constraintVertical_bias="0.789" />
 
     <Button
         android:id="@+id/btnVrai"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="96dp"
+        android:layout_marginEnd="88dp"
         android:text="VRAI"
         app2:layout_constraintBottom_toBottomOf="parent"
         app2:layout_constraintEnd_toEndOf="parent"
         app2:layout_constraintTop_toBottomOf="@+id/question"
-        app2:layout_constraintVertical_bias="0.492" />
+        app2:layout_constraintVertical_bias="0.789" />
 
     <Button
         android:id="@+id/suivant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
         android:text="suivant"
         app2:layout_constraintBottom_toBottomOf="parent"
         app2:layout_constraintEnd_toEndOf="parent"
-        app2:layout_constraintHorizontal_bias="0.916"
-        app2:layout_constraintStart_toStartOf="parent" />
+        app2:layout_constraintHorizontal_bias="0.879"
+        app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toTopOf="parent"
+        app2:layout_constraintVertical_bias="0.971" />
+
+    <TextView
+        android:id="@+id/explication"
+        android:layout_width="339dp"
+        android:layout_height="306dp"
+        android:text="TextView"
+        app2:layout_constraintBottom_toBottomOf="parent"
+        app2:layout_constraintEnd_toEndOf="@+id/question"
+        app2:layout_constraintHorizontal_bias="0.0"
+        app2:layout_constraintStart_toStartOf="@+id/question"
+        app2:layout_constraintTop_toTopOf="parent"
+        app2:layout_constraintVertical_bias="0.463" />
 </androidx.constraintlayout.widget.ConstraintLayout>
