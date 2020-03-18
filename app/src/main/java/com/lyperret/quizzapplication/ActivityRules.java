@@ -2,6 +2,7 @@ package com.lyperret.quizzapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -27,13 +28,27 @@ public class ActivityRules extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){
             case R.id.menuHome:
+                Intent intent = new Intent(ActivityRules.this, ActivityChoice.class);
+                startActivity(intent);
                 finish();
                 return true;
             case R.id.menuQuit:
-                finish();
+                this.onDestroy();
                 System.exit(0);
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(ActivityRules.this, ActivityChoice.class);
+        startActivity(intent);
     }
 }

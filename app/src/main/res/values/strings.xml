@@ -7,5 +7,213 @@
         <item>Musique</item>
     </string-array>
 
+    //Réponse
+    <string name="vrai">VRAI</string>
+    <string name="faux">FAUX</string>
+
+    <string name="BravoFAUX">Bravo, la bonne réponse était FAUX.</string>
+    <string name="DommageVRAI">Dommage, la bonne réponse était VRAI.</string>
+
+    <string name="BravoVRAI">Bravo, la bonne réponse était VRAI.</string>
+    <string name="DommageFAUX">Dommage, la bonne réponse était FAUX.</string>
+
+    //Difficultés
+    <string name="facile">Facile</string>
+    <string name="moyen">Moyen</string>
+    <string name="difficile">Difficile</string>
+
+    //Thèmes
+    <string name="animaux">Animaux</string>
+    <string name="sciences">SciencesEtTech</string>
+    <string name="histoire">Histoire</string>
+    <string name="musique">Musique</string>
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////// QUESTION DU QUIZZ ///////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //Questions pour le Thème Animaux avec la difficulté facile
+    //Question 1 - ANIMAUX FACILE VRAI
+    <string name="AF1E">Les pieds du manchot servent de nid test.</string>
+    <string name="AF1EX">Le manchot mâle place délicatement l’œuf sur ses pattes, puis le cache sous un bourrelet de peau qui transmet efficacement sa chaleur corporelle à l’œuf pour le protéger du froid. La couvaison dure environ deux mois.</string>
+
+    //Question 2 - ANIMAUX FACILE VRAI
+    <string name="AF2E">L’albatros peut voler des heures sans battre des ailes.</string>
+    <string name="AF2Ex">L’albatros hurleur plane au-dessus de la mer pendant des heures sans esquisser le moindre battement d’ailes. Il peut parcourir près de 500 km (310 mi) par jour et atteindre des vitesses frôlant les 70 km/h (43 mi/h) en se laissant simplement porter par les vents.</string>
+
+    //Question 3 - ANIMAUX FACILE VRAI
+    <string name="AF3E">La couleuvre à collier feint parfois d’être morte pour éloigner les prédateurs non charognards.</string>
+    <string name="AF3Ex">La couleuvre à collier possède de nombreuses stratégies de défense. Il lui arrive de simuler la mort en se retournant sur le dos, restant immobile, la bouche ouverte et la langue pendante. C’est sa façon d’éloigner les prédateurs non charognards.</string>
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //Questions pour le Thème Animaux avec la difficulté moyenne
+    //Question 1 - ANIMAUX MOYEN FAUX
+    <string name="AM1E">Les chauves-souris vampires sont un mythe.</string>
+    <string name="AM1Ex">Il existe 3 espèces de chauve-souris qui se nourrissent de sang. Ces chauves-souris vivent dans les zones tropicales du continent américain. Elles mesurent à peine 20 cm (8 po) et ne menacent pas la vie de leurs victimes, car elles ne prélèvent qu’une petite quantité de sang.</string>
+
+    //Question 2 - ANIMAUX MOYEN VRAI
+    <string name="AM2E">Le petit du phoque (blanchon) triple son poids en 12 jours.</string>
+    <string name="AM2Ex">Le blanchon triple son poids en 12 jours grâce au lait de sa mère qui contient 45 % de gras (celui de la vache n’en contient que 4 %). À 12 jours, il pèse environ 35 kg (77 lb) dont la moitié en graisse.</string>
+
+    //Question 3 - ANIMAUX MOYEN FAUX
+    <string name="AM3E">Le crocodile brise la nuque de ses grosses proies pour les tuer.</string>
+    <string name="AM3Ex">Le crocodile saisit ses grosses proies et les entraîne dans le fond des cours d’eau pour les noyer. Il les laisse ensuite pourrir quelques jours au fond de la rivière afin qu’elles soient plus faciles à démembrer.</string>
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //Questions pour le Thème Animaux avec la difficulté difficile
+    //Question 1 - ANIMAUX DIFFICILE VRAI
+    <string name="AD1E">Le morse possède une paire de sacs, reliés au pharynx, qui l’aident à flotter.</string>
+    <string name="AD1Ex">Le morse possède une paire de sacs reliés au pharynx. Une fois gonflés d’air, ces sacs lui servent de bouées et l’aident à maintenir sa tête hors de l’eau.</string>
+
+    //Question 2 - ANIMAUX DIFFICILE FAUX
+    <string name="AD2E">Le dernier gavial s’est éteint au début du 20e siècle.</string>
+    <string name="AD2Ex">Le gavial vit toujours dans le nord de l’Inde et du Népal. Toutefois, l’espèce est en danger critique d’extinction. C’est un crocodilien piscivore, c’est-à-dire qu’il se nourrit de poisson. Il ne représente donc aucun danger pour l’humain.</string>
+
+    //Question 3 - ANIMAUX DIFFICILE VRAI
+    <string name="AD3E">Les manchots marchent jusqu’à 100 km (60 mi) pour atteindre leur lieu de reproduction.</string>
+    <string name="AD3Ex">En mars et avril, les manchots avancent en longues files vers leurs lieux de nidification qui se trouve parfois à plus de 100 km (60 mi) de leurs lieux de pêche.</string>
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //Questions pour le Thème ScienceEtTech avec la difficulté facile
+    //Question 1 - SCIENCE FACILE VRAI
+    <string name="SF1E">Il y a de l’eau sur la Lune.</string>
+    <string name="SF1Ex">Les scientifiques ont confirmé en 2018 qu’il y avait bel et bien de la glace sur les pôles.</string>
+
+    //Question 2 - SCIENCE FACILE VRAI
+    <string name="SF2E">En plus d’avoir développé la théorie de la gravitation universelle, Isaac Newton a excellé en optique.</string>
+    <string name="SF2Ex">Le physicien, mathématicien et astronome anglais Isaac Newton, né en 1642 ou 1643, est reconnu pour sa théorie de la gravitation universelle. En optique, on lui doit une théorie de la couleur selon laquelle un prisme décompose la lumière blanche en un spectre visible.</string>
+
+    //Question 3 - SCIENCE FACILE FAUX
+    <string name="SF3E">Les vaccins sont efficaces à 100 %.</string>
+    <string name="SF3Ex">Il n’y a aucun vaccin efficace à 100 %. Leur efficacité dépend de plusieurs facteurs comme l’âge et l’état de santé de la personne qui le reçoit. Par contre, plusieurs études et experts affirment que la vaccination demeure le meilleur moyen pour se protéger de plusieurs infections.</string>
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //Questions pour le Thème ScienceEtTech avec la difficulté moyenne
+    //Question 1 - SCIENCE MOYEN FAUX
+    <string name="SM1E">Archimède est considéré comme le père de la médecine.</string>
+    <string name="SM1Ex">C’est Hippocrate (v. 460 - v. 377 av. J.-⁠C.) qui est considéré comme le père de la médecine parce qu’il a institué cette science comme une discipline indépendante, distincte de la philosophie. Quant à Archimède (v. 287-212 av. J.-⁠C.), il s’est illustré en mathématiques, en physique et en ingénierie. On lui doit d’ailleurs le principe du levier.</string>
+
+    //Question 2 - SCIENCE MOYEN FAUX
+    <string name="SM2E">La gravité sur la Lune équivaut à 5 % de celle de la Terre.</string>
+    <string name="SM2Ex">La gravité ressentie sur la Lune représente 17 % de son équivalent terrestre.</string>
+
+    //Question 3 - SCIENCE MOYEN VRAI
+    <string name="SM3E">Alfred Nobel, le créateur des prix Nobel, dont celui de la Paix, a aussi inventé la dynamite.</string>
+    <string name="SM3Ex">Alfred Nobel a inventé la dynamite en maîtrisant la puissance explosive instable de la nitroglycérine. À sa mort, il légua son immense fortune pour la création des prix Nobel.</string>
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //Questions pour le Thème ScienceEtTech avec la difficulté difficile
+    //Question 1 - SCIENCE DIFFICILE FAUX
+    <string name="SD1E">Carl von Linné a mis au point le premier véritable système de classification des éléments chimiques.</string>
+    <string name="SD1Ex">Le naturaliste suédois Carl von Linné, né en 1707, a fondé le système moderne de classification systématique des plantes et des animaux divisés en classes, ordres, genres, espèces et variétés. Nous devons la classification périodique des éléments chimiques au chimiste russe Dmitri Mendeleïev.</string>
+
+    //Question 2 - SCIENCE DIFFICILE FAUX
+    <string name="SD2E">Les suppléments de glucosamine guérissent l’arthrite.</string>
+    <string name="SD2Ex">Si plusieurs études ont démontré que les suppléments de glucosamine permettaient d’atténuer les symptômes de l’arthrite, ils ne permettent pas de venir à bout de la maladie. À l’heure actuelle, l’arthrite est encore une maladie incurable.</string>
+
+    //Question 3 - SCIENCE DIFFICILE FAUX
+    <string name="SD3E">Eurêka est le nom d’un des plus grands mathématiciens de l’Antiquité grecque.</string>
+    <string name="SD3Ex">Selon la légende, « eurêka » est le cri de joie poussé par le savant grec Archimède lorsqu’il a compris que « tout corps plongé dans un fluide au repos subit une force verticale dirigée vers le haut et dont l’intensité est égale au poids du volume de fluide déplacé ». Cette loi est appelée « poussée d’Archimède ».</string>
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //Questions pour le Thème Histoire avec la difficulté facile
+    //Question 1 - HISTOIRE FACILE VRAI
+    <string name="HF1E">Ayant siégé sur le trône de France pendant 20 minutes, Louis XIX est le roi ayant eu le règne le plus court de la monarchie française.</string>
+    <string name="HF1Ex">Après l’abdication de son père Charles X, le 2 août 1830, Louis XIX est couronné roi de France. Vingt minutes plus tard, il renonce à ses droits en faveur de son neveu Henri d’Artois.</string>
+
+    //Question 2 - HISTOIRE FACILE VRAI
+    <string name="HF2E">Napoléon Ier est mort d’un cancer de l’estomac le 5 mai 1821, sur l’île Sainte-Hélène.</string>
+    <string name="HF2Ex">La réponse est VRAI.Napoléon Ier est mort d’un cancer de l’estomac le 5 mai 1821, sur l’île Sainte-Hélène où il avait été déporté par l’armée britannique six ans plus tôt.</string>
+
+    //Question 3 - HISTOIRE FACILE FAUX
+    <string name="HF3E">Au début de la guerre de 1914, le Japon était allié à l’Allemagne.</string>
+    <string name="HF3Ex">Le 23 août 1914, l’Empire du Japon déclare la guerre à l’Empire allemand. Le Japon profita du conflit pour étendre sa sphère d’influence. Il s’empara, entre autres, des possessions de l’Empire allemand dans la région du Shandong en Chine et dans le Pacifique, notamment les îles Mariannes, Marshall, et Carolines.</string>
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //Questions pour le Thème Histoire avec la difficulté moyenne
+    //Question 4 - HISTOIRE MOYEN FAUX
+    <string name="HM1E">La Triple-Entente regroupait l’Allemagne, l’Italie et l’Autriche-Hongrie.</string>
+    <string name="HM1Ex">La Triple-Entente regroupait la France, le Royaume-Uni et la Russie, tandis que la Triple-Alliance unissait l’Allemagne, l’Autriche-Hongrie et l’Italie. Un peu plus tard, l’Empire ottoman a joint la Triple-Alliance tandis que l’Italie l’a quittée.</string>
+
+    //Question 5 - HISTOIRE MOYEN FAUX
+    <string name="HM2E">Le Danemark, la Finlande et la Suède sont tous des membres fondateurs de l’Union européenne, laquelle a été fondée en 1993.</string>
+    <string name="HM2Ex">La Finlande et la Suède ont grossi les rangs de l’Union européenne en 1995, soit deux ans après le Danemark. </string>
+
+    //Question 6 - HISTOIRE MOYEN FAUX
+    <string name="HM3E">Pendant le Moyen Âge, les courtisanes qui font leur entrée à la cour d’un roi sont appelées «courtines».</string>
+    <string name="HM3Ex">Une courtine est un mur de rempart qui relie les flancs de deux bastions d’un château fort.</string>
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //Questions pour le Thème Histoire avec la difficulté difficile
+    //Question 7 - HISTOIRE DIFFICILE VRAI
+    <string name="HD1E">Le Venezuela a été le premier pays d’Amérique du Sud à s’affranchir d’une puissance coloniale européenne.</string>
+    <string name="HD1Ex">Le 5 juillet 1811, le Venezuela a mis fin à sa relation avec l’Espagne.</string>
+
+    //Question 8 - HISTOIRE DIFFICILE FAUX
+    <string name="HD2E">La première colonie islandaise permanente aurait été établie par des Danois en 874.</string>
+    <string name="HD2Ex">Si on en croit le Landnámabók, ou Livre de la colonisation, Ingólfr Arnarson et Hallveig Fródadóttir venaient plutôt de Norvège.</string>
+
+    //Question 9 - HISTOIRE DIFFICILE FAUX
+    <string name="HD3E">Le Moyen Âge commença en 486 avec la chute de l’Empire romain.</string>
+    <string name="HD3Ex">La chute de l’Empire romain, en 476, marque le début du Moyen Âge.</string>
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //Questions pour le Thème Musique avec la difficulté facile
+    //Question 1 - MUSIQUE FACILE FAUX
+    <string name="MF1E">Les Beatles ont toujours été quatre.</string>
+    <string name="MF1Ex">En 1960 et 1961, la basse était tenue par un certain Stuart Sutcliffe. À son départ du groupe, devenu quatuor, c’est Paul qui en a hérité.</string>
+
+    //Question 2 - MUSIQUE FACILE FAUX
+    <string name="MF2E">Mick Jagger est le père de quatre enfants.</string>
+    <string name="MF2Ex">Mick Jagger est le géniteur de pas moins de huit enfants. Le dernier est né en 2016, juste à temps pour le 73e anniversaire du chanteur</string>
+
+    //Question 3 - MUSIQUE FACILE VRAI
+    <string name="MF3E">La chanson Flashdance… What a Feeling a gagné l’Oscar de la meilleure chanson originale.</string>
+    <string name="MF3Ex">Composée par Giorgio Moroder, la chanson interprétée par Irene Cara a remporté l’Oscar en 1984.</string>
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //Questions pour le Thème Musique avec la difficulté moyenne
+    //Question 4 - MUSIQUE MOYEN VRAI
+    <string name="MM1E">"Jimi Hendrix tenait sa guitare à l'envers."</string>
+    <string name="MM1Ex">"N'arrivant pas à trouver une guitare pour gaucher, Hendrix a inversé l'ordre des cordes d'une guitare pour droitier, qu'il tenait à l'envers."</string>
+
+    //Question 5 - MUSIQUE MOYEN VRAI
+    <string name="MM2E">Céline dion n’a jamais voulu enregistrer My Heart Will Go On.</string>
+    <string name="MM2Ex">La chanteuse détestait la chanson ; c’est René qui l’a convaincue d’enregistrer un démo, qui est devenu la version de la trame sonore du film Titanic de James Cameron.</string>
+
+    //Question 6 - MUSIQUE MOYEN FAUX
+    <string name="MM3E">"Brian May, le guitariste de Queen, est détenteur d'un PhD en Mathématiques."</string>
+    <string name="MM3Ex">"May est plutôt diplômé en astrophysique. Il avait presque terminé sa thèse de doctorat quand Queen a décollé. Il l'a terminée en 2007."</string>
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //Questions pour le Thème Musique avec la difficulté difficile
+    //Question 7 - MUSIQUE DIFFICILE FAUX
+    <string name="MD1E">I Want To Hold Your Hand est la chanson des Beatles qui est restée le plus longtemps en tête du palmarès Billboard.</string>
+    <string name="MD1Ex">Il s’agit plutôt de Hey Jude, qui y est restée neuf semaines, soit deux de plus que I Want To Hold Your Hand.</string>
+
+    //Question 8 - MUSIQUE DIFFICILE VRAI
+    <string name="MD2E">La chanson Manic Monday, interprétée par The Bangles, a été écrite par Prince.</string>
+    <string name="MD2Ex">Prince n’a enregistré qu’un démo de cette chanson, en duo avec Apollonia, avant de l’offrir aux Bangles, qui enregistraient dans le même studio.</string>
+
+    //Question 9 - MUSIQUE DIFFICILE FAUX
+    <string name="MD3E">Ray Charles est né aveugle, ce qui a beaucoup compliqué son enfance.</string>
+    <string name="MD3Ex">"Ray Charles n'est devenu complètement aveugle que vers l\'âge de sept ans. Les médecins présumaient qu’il souffrait d’un glaucome juvénile."</string>
 
 </resources>

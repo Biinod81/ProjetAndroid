@@ -39,9 +39,7 @@ public class ActivityChoice extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selectedItemText = (String) parent.getItemAtPosition(position);
                 // Notify the selected item text
-                Toast.makeText
-                        (getApplicationContext(), "Selected : " + selectedItemText, Toast.LENGTH_SHORT)
-                        .show();
+
                 themeChoisi = selectedItemText;
             }
 
@@ -109,11 +107,11 @@ public class ActivityChoice extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){
             case R.id.menuRules:
-                Toast.makeText(this,"Règles",Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(ActivityChoice.this,ActivityRules.class));
+                finish();
                 return true;
             case R.id.menuQuit:
-                Toast.makeText(this,"Quitter",Toast.LENGTH_SHORT).show();
+                finish();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -123,4 +121,11 @@ public class ActivityChoice extends AppCompatActivity {
     //annule le retour arrière
     @Override
     public void onBackPressed(){}
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 }
+
+

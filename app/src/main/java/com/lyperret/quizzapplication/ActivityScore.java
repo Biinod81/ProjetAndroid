@@ -11,4 +11,7 @@ public class ActivityScore extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_activity_score);
     }
+
+    @Override
+    public void onBackPressed() {}
 }
