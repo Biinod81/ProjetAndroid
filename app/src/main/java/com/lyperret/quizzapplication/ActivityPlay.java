@@ -63,8 +63,7 @@ public class ActivityPlay extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){
             case R.id.menuCroix:
-                startActivity(new Intent(ActivityPlay.this,ActivityChoice.class));
-                finish();
+                startActivity(new Intent(ActivityPlay.this,ActivityPopup.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

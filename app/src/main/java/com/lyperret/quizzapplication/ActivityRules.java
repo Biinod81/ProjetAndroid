@@ -47,8 +47,6 @@ public class ActivityRules extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
-        Intent intent = new Intent(ActivityRules.this, ActivityChoice.class);
-        startActivity(intent);
+        finish();
     }
 }

@@ -75,6 +75,21 @@ public class ActivityChoice extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()){
+            case R.id.menuRules:
+                startActivity(new Intent(ActivityChoice.this,ActivityRules.class));
+                finish();
+                return true;
+            case R.id.menuQuit:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
     //Récupération de la difficulté sélectionné
     public void onRadioButtonClicked(View view){
         boolean checked = ((RadioButton) view).isChecked();
@@ -100,21 +115,6 @@ public class ActivityChoice extends AppCompatActivity {
             default:
                 this.difficulte = "facile";
                 break;
-        }
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch(item.getItemId()){
-            case R.id.menuRules:
-                startActivity(new Intent(ActivityChoice.this,ActivityRules.class));
-                finish();
-                return true;
-            case R.id.menuQuit:
-                finish();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
         }
     }
 
