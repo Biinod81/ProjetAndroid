@@ -24,16 +24,18 @@ public class ActivityPopup extends AppCompatActivity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int)(width*0.8),(int)(height*0.4));
+        getWindow().setLayout((int) (width * 0.7), (int) (height * 0.25));
 
-    }
-
-    private void popUpClick(View view){
-        switch (view.getId()){
-            case R.id.btnOui:
+        //retourne à Activity_Choice si le joueur clique sur "OUI"
+        final Button button = findViewById(R.id.btnOui);
+        button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
                 startActivity(new Intent(ActivityPopup.this,ActivityChoice.class));
                 finish();
-                break;
-        }
+            }
+        });
+
     }
+
 }
