@@ -63,6 +63,7 @@ public class ActivityChoice extends AppCompatActivity {
                     intent.putExtra("difficulte",difficulte);
                     intent.putExtra("theme",themeChoisi);
                     startActivity(intent);
+                    finish();
                 }
             }
         });

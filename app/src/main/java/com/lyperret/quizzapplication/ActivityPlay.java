@@ -28,7 +28,6 @@ public class ActivityPlay extends AppCompatActivity {
     Cursor curs;
     private int i;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -112,6 +111,7 @@ public class ActivityPlay extends AppCompatActivity {
                         if(i == 2) {
                             Intent intent = new Intent(ActivityPlay.this, ActivityScore.class);
                             startActivity(intent);
+                            finish();
                         }
                         else{
                             String questionEnonce = curs.getString(curs.getColumnIndexOrThrow("enonce"));
@@ -151,6 +151,7 @@ public class ActivityPlay extends AppCompatActivity {
                         if(i == 2) {
                             Intent intent = new Intent(ActivityPlay.this, ActivityScore.class);
                             startActivity(intent);
+                            finish();
                         }
                         else {
                             String questionEnonce = curs.getString(curs.getColumnIndexOrThrow("enonce"));

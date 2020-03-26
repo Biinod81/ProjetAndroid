@@ -33,16 +33,10 @@ public class ActivityRules extends AppCompatActivity {
                 finish();
                 return true;
             case R.id.menuQuit:
-                this.onDestroy();
-                System.exit(0);
+                finish();
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
     }
 
     @Override

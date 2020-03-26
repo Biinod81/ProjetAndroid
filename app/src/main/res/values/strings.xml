@@ -35,7 +35,7 @@
 
     //Questions pour le Thème Animaux avec la difficulté facile
     //Question 1 - ANIMAUX FACILE VRAI
-    <string name="AF1E">Les pieds du manchot servent de nid test.</string>
+    <string name="AF1E">Les pieds du manchot servent de nid.</string>
     <string name="AF1EX">Le manchot mâle place délicatement l’œuf sur ses pattes, puis le cache sous un bourrelet de peau qui transmet efficacement sa chaleur corporelle à l’œuf pour le protéger du froid. La couvaison dure environ deux mois.</string>
 
     //Question 2 - ANIMAUX FACILE VRAI
