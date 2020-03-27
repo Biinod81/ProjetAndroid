@@ -2,8 +2,10 @@ package com.lyperret.quizzapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -22,10 +24,15 @@ public class ActivityChoice extends AppCompatActivity {
     String difficulte="Facile";
     String themeChoisi;
 
+
+    @SuppressLint("SourceLockedOrientationActivity")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_activity_choice);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
 
         //création de la liste déroulante pour les thèmes
         final Spinner spinner = findViewById(R.id.spinnerTheme);
@@ -62,6 +69,7 @@ public class ActivityChoice extends AppCompatActivity {
                     Intent intent = new Intent(ActivityChoice.this, ActivityPlay.class);
                     intent.putExtra("difficulte",difficulte);
                     intent.putExtra("theme",themeChoisi);
+                    intent.putExtra("pseudo", pseudo.getText().toString());
                     startActivity(intent);
                     finish();
                 }

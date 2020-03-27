@@ -27,6 +27,9 @@ public class ActivityPlay extends AppCompatActivity {
     TextView explication;
     Cursor curs;
     private int i;
+    int scoreExtra;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,8 @@ public class ActivityPlay extends AppCompatActivity {
         //récupération de la difficulté et du thème choisi
         String difficulte = getIntent().getStringExtra("difficulte");
         String theme = getIntent().getStringExtra("theme");
+
+
 
         this.selectData(difficulte, theme);
     }
@@ -84,17 +89,18 @@ public class ActivityPlay extends AppCompatActivity {
     }
 
     public void traitementReponse(final String difficulte, final String theme){
-
+        final String pseudoExtra = getIntent().getStringExtra("pseudo");
         final String questionEnonce = curs.getString(curs.getColumnIndexOrThrow("enonce"));
         question.setText(questionEnonce);
         btnFaux.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String textFaux = btnFaux.getText().toString();
+                //String textFaux = btnFaux.getText().toString();
                 explication.setVisibility(View.VISIBLE);
                 String reponse = curs.getString(curs.getColumnIndexOrThrow("reponse"));
                 if(reponse.equals("FAUX")){
                     explication.setText(getString(R.string.BravoFAUX)+"\n" + curs.getString(curs.getColumnIndexOrThrow("explication")));
+                    scoreExtra++;
 
                 }
                 else{
@@ -110,6 +116,8 @@ public class ActivityPlay extends AppCompatActivity {
                     public void onClick(View view) {
                         if(i == 2) {
                             Intent intent = new Intent(ActivityPlay.this, ActivityScore.class);
+                            intent.putExtra("pseudo", pseudoExtra);
+                            intent.putExtra("score",scoreExtra);
                             startActivity(intent);
                             finish();
                         }
@@ -131,11 +139,12 @@ public class ActivityPlay extends AppCompatActivity {
         btnVrai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String textVrai = btnVrai.getText().toString();
+                //String textVrai = btnVrai.getText().toString();
                 explication.setVisibility(View.VISIBLE);
                 String reponse = curs.getString(curs.getColumnIndexOrThrow("reponse"));
                 if(reponse.equals("VRAI")){
                     explication.setText(getString(R.string.BravoVRAI)+"\n" + curs.getString(curs.getColumnIndexOrThrow("explication")));
+                    scoreExtra++;
                 }
                 else{
                     explication.setText(getString(R.string.DommageFAUX)+"\n" + curs.getString(curs.getColumnIndexOrThrow("explication")));
@@ -150,6 +159,8 @@ public class ActivityPlay extends AppCompatActivity {
                     public void onClick(View view) {
                         if(i == 2) {
                             Intent intent = new Intent(ActivityPlay.this, ActivityScore.class);
+                            intent.putExtra("pseudo", pseudoExtra);
+                            intent.putExtra("score",scoreExtra);
                             startActivity(intent);
                             finish();
                         }

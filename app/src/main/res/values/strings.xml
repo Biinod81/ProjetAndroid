@@ -217,4 +217,13 @@
     <string name="MD3E">Ray Charles est né aveugle, ce qui a beaucoup compliqué son enfance.</string>
     <string name="MD3Ex">"Ray Charles n'est devenu complètement aveugle que vers l\'âge de sept ans. Les médecins présumaient qu’il souffrait d’un glaucome juvénile."</string>
 
+
+
+    //Score
+
+    <string name="_3of3">Bravo, vous avez correctement répondu aux 3 questions</string>
+    <string name="_2of3">Pas mal, vous avez correctement répondu à 2 questions sur 3</string>
+    <string name="_1of3">Peu mieux faire, vous avez correctement répondu à 1 question sur 3</string>
+    <string name="_0of3">Dommage, vous n\'avez pas correctement répondu aux 3 questions</string>
+
 </resources>
