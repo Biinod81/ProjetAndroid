@@ -68,8 +68,6 @@ public class ActivityScore extends AppCompatActivity {
                 finish();
             }
         });
-
-
     }
 
     @Override
@@ -88,10 +86,6 @@ public class ActivityScore extends AppCompatActivity {
                 return true;
             case R.id.menuRules:
                 startActivity(new Intent(ActivityScore.this,ActivityRules.class));
-                finish();
-                return true;
-            case R.id.menuQuit:
-                finish();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

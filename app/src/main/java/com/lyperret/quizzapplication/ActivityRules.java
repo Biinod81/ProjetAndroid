@@ -32,8 +32,6 @@ public class ActivityRules extends AppCompatActivity {
                 startActivity(intent);
                 finish();
                 return true;
-            case R.id.menuQuit:
-                finish();
             default:
                 return super.onOptionsItemSelected(item);
         }

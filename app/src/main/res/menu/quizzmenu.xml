@@ -12,8 +12,4 @@
         android:id="@+id/menuRules"
         android:title="Règles"
         app:showAsAction="never" />
-    <item
-        android:id="@+id/menuQuit"
-        android:title="Quitter"
-        app:showAsAction="never"/>
 </menu>

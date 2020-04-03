@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="@drawable/choice_bg"
     tools:context=".ActivityChoice">
 
     <EditText
@@ -14,9 +15,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="20dp"
         android:layout_marginTop="80dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
+        android:fontFamily="@font/tommy_soft_reg_out"
         android:hint="Entrez votre pseudo"
         android:inputType="textPersonName"
         app2:layout_constraintBottom_toBottomOf="parent"
@@ -30,7 +32,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:fontFamily="@font/tommy_soft_black_out"
         android:text="DIFFICULTÉS"
+        android:textColor="#FFFFFF"
         android:textSize="25sp" />
 
     <RadioGroup
@@ -39,14 +43,16 @@
 
         <RadioButton
             android:id="@+id/radioButton_facile"
-            android:checked="true"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
+            android:checked="true"
+            android:fontFamily="@font/tommy_soft_reg_out"
             android:onClick="onRadioButtonClicked"
-            android:text="Facile" />
+            android:text="Facile"
+            android:textColor="#FFFFFF" />
 
         <RadioButton
             android:id="@+id/radioButton_moyen"
@@ -55,27 +61,33 @@
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
+            android:fontFamily="@font/tommy_soft_reg_out"
             android:onClick="onRadioButtonClicked"
-            android:text="Moyen" />
+            android:text="Moyen"
+            android:textColor="#FFFFFF" />
 
         <RadioButton
             android:id="@+id/radioButton_difficile"
-            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
+            android:layout_gravity="center"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/tommy_soft_reg_out"
             android:onClick="onRadioButtonClicked"
-            android:text="Difficile" />
+            android:text="Difficile"
+            android:textColor="#FFFFFF" />
 
         <TextView
-            android:layout_marginTop="16dp"
             android:id="@+id/titleTheme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="THEMES"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/tommy_soft_black_out"
             android:gravity="center"
-            android:textSize="25sp"/>
+            android:text="THEMES"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp" />
 
         <Spinner
             android:layout_marginTop="8dp"
@@ -93,7 +105,9 @@
                 android:id="@+id/BTN_Play"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/tommy_soft_black_out"
                 android:text="JOUER"
+                android:textColor="#000000"
                 app2:layout_constraintBottom_toBottomOf="parent"
                 app2:layout_constraintEnd_toEndOf="parent"
                 app2:layout_constraintHorizontal_bias="0.498"

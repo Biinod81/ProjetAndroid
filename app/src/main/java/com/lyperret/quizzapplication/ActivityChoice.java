@@ -89,10 +89,6 @@ public class ActivityChoice extends AppCompatActivity {
         switch(item.getItemId()){
             case R.id.menuRules:
                 startActivity(new Intent(ActivityChoice.this,ActivityRules.class));
-                finish();
-                return true;
-            case R.id.menuQuit:
-                finish();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
