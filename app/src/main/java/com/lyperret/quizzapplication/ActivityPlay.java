@@ -32,6 +32,7 @@ public class ActivityPlay extends AppCompatActivity {
 
 
 
+    @SuppressLint("SourceLockedOrientationActivity")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +40,7 @@ public class ActivityPlay extends AppCompatActivity {
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         this.insertData();
         this.i=0;
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         suivant = findViewById(R.id.suivant);
         suivant.setVisibility(View.INVISIBLE);
