@@ -84,7 +84,7 @@ public class ActivityPlay extends AppCompatActivity {
     @Override
     public void onBackPressed() {}
 
-
+    //select toutes les questions pour une difficulté et un thème donné
     public void selectData(final String difficulte, final String theme){
         SQLiteDatabase db = bdd.getWritableDatabase();
         String[] col = {"*"};
@@ -95,21 +95,26 @@ public class ActivityPlay extends AppCompatActivity {
         traitementReponse(difficulte,theme);
     }
 
-
+    //gère l'affichage / traitement en fonction du bouton cliqué / réponse à la question
     public void traitementReponse(final String difficulte, final String theme){
         final String pseudoExtra = getIntent().getStringExtra("pseudo");
         final String questionEnonce = curs.getString(curs.getColumnIndexOrThrow("enonce"));
         question.setText(questionEnonce);
+
+        //clic bouton faux
         btnFaux.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 explication.setVisibility(View.VISIBLE);
                 String reponse = curs.getString(curs.getColumnIndexOrThrow("reponse"));
+
+                //si la réponse à la quetsion est " FAUX "
                 if(reponse.equals("FAUX")){
                     explication.setText(getString(R.string.BravoFAUX)+"\n" + curs.getString(curs.getColumnIndexOrThrow("explication")));
                     scoreExtra++;
 
                 }
+                //si la réponse à la quetsion est " VRAI "
                 else{
                     explication.setText(getString(R.string.DommageVRAI)+"\n" + curs.getString(curs.getColumnIndexOrThrow("explication")));
                 }
@@ -118,9 +123,11 @@ public class ActivityPlay extends AppCompatActivity {
                 btnVrai.setVisibility(View.INVISIBLE);
                 curs.moveToNext();
 
+                //clic bouton suivant pour passer à la prochaine question
                 suivant.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        //si on a répondu à toutes les question on passe à l'activité des scores
                         if(i == 2) {
                             Intent intent = new Intent(ActivityPlay.this, ActivityScore.class);
                             intent.putExtra("pseudo", pseudoExtra);
@@ -143,15 +150,18 @@ public class ActivityPlay extends AppCompatActivity {
             }
         });
 
+        //clic bouton vrai
         btnVrai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 explication.setVisibility(View.VISIBLE);
                 String reponse = curs.getString(curs.getColumnIndexOrThrow("reponse"));
+                //si la réponse à la quetsion est " VRAI "
                 if(reponse.equals("VRAI")){
                     explication.setText(getString(R.string.BravoVRAI)+"\n" + curs.getString(curs.getColumnIndexOrThrow("explication")));
                     scoreExtra++;
                 }
+                //si la réponse à la quetsion est " FAUX "
                 else{
                     explication.setText(getString(R.string.DommageFAUX)+"\n" + curs.getString(curs.getColumnIndexOrThrow("explication")));
                 }
@@ -160,9 +170,11 @@ public class ActivityPlay extends AppCompatActivity {
                 btnVrai.setVisibility(View.INVISIBLE);
                 curs.moveToNext();
 
+                //clic bouton suivant pour passer à la prochaine question
                 suivant.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        //si on a répondu à toutes les question on passe à l'activité des scores
                         if(i == 2) {
                             Intent intent = new Intent(ActivityPlay.this, ActivityScore.class);
                             intent.putExtra("pseudo", pseudoExtra);
@@ -187,6 +199,7 @@ public class ActivityPlay extends AppCompatActivity {
 
     }
 
+    //insertion des questions dans la BD
     @SuppressLint("ResourceType")
     public void insertData(){
         SQLiteDatabase db = bdd.getWritableDatabase();
