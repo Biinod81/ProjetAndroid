@@ -31,7 +31,8 @@ public class ActivityPopup extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(ActivityPopup.this,ActivityChoice.class));
-                finish();
+                finish(); //met fin à ActivityPopup
+                ActivityPlay.getInstance().finish(); //met fin à ActivityPlay
             }
         });
 

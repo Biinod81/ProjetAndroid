@@ -29,8 +29,7 @@ public class ActivityPlay extends AppCompatActivity {
     Cursor curs;
     private int i;
     int scoreExtra;
-
-
+    static ActivityPlay ActivityPlay;
 
     @SuppressLint("SourceLockedOrientationActivity")
     @Override
@@ -40,7 +39,8 @@ public class ActivityPlay extends AppCompatActivity {
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         this.insertData();
         this.i=0;
-        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        ActivityPlay = this;
 
         suivant = findViewById(R.id.suivant);
         suivant.setVisibility(View.INVISIBLE);
@@ -50,12 +50,9 @@ public class ActivityPlay extends AppCompatActivity {
         explication.setVisibility(View.INVISIBLE);
         question = findViewById(R.id.question);
 
-
         //récupération de la difficulté et du thème choisi
         String difficulte = getIntent().getStringExtra("difficulte");
         String theme = getIntent().getStringExtra("theme");
-
-
 
         this.selectData(difficulte, theme);
     }
@@ -78,8 +75,15 @@ public class ActivityPlay extends AppCompatActivity {
         }
     }
 
+    //Permet de finish() cette activité à partir d'une autre activité CF ActivityPopup
+    public static ActivityPlay getInstance(){
+        return ActivityPlay;
+    }
+
+    //Annule le retour arrière
     @Override
-    public void onBackPressed() { }
+    public void onBackPressed() {}
+
 
     public void selectData(final String difficulte, final String theme){
         SQLiteDatabase db = bdd.getWritableDatabase();
@@ -87,10 +91,10 @@ public class ActivityPlay extends AppCompatActivity {
         String[] select={theme, difficulte};
         curs = db.query("questions", col, "theme=? and difficulte=?", select,null, null, "id ASC");
 
-
         curs.moveToFirst();
         traitementReponse(difficulte,theme);
     }
+
 
     public void traitementReponse(final String difficulte, final String theme){
         final String pseudoExtra = getIntent().getStringExtra("pseudo");
@@ -99,7 +103,6 @@ public class ActivityPlay extends AppCompatActivity {
         btnFaux.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //String textFaux = btnFaux.getText().toString();
                 explication.setVisibility(View.VISIBLE);
                 String reponse = curs.getString(curs.getColumnIndexOrThrow("reponse"));
                 if(reponse.equals("FAUX")){
@@ -143,7 +146,6 @@ public class ActivityPlay extends AppCompatActivity {
         btnVrai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //String textVrai = btnVrai.getText().toString();
                 explication.setVisibility(View.VISIBLE);
                 String reponse = curs.getString(curs.getColumnIndexOrThrow("reponse"));
                 if(reponse.equals("VRAI")){

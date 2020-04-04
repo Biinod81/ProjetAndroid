@@ -38,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/tommy_soft_black_out"
-        android:text="Quitter"
+        android:text="@string/quitter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textScore"
         app:layout_constraintHorizontal_bias="0.397"

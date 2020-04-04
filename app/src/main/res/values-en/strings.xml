@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QuizzAPP</string>
+    <string name="authors">Created by Thomas LY and Anthony PERRET</string>
+    <string name="rules">Welcome to our QuizzAPP game, the rules are simple. Choose a difficulty and a theme, then a series of questions will be asked. Have fun !</string>
+    <string name="_3of3">Well done, you have correctly answered the 3 questions</string>
+    <string name="_2of3">Not bad, you answered 2 of 3 questions correctly</string>
+    <string name="_1of3">Could do better, you answered 1 of 3 questions correctly</string>
+    <string name="_0of3">Too bad, you did not answer the 3 questions correctly</string>
+    <string name="quitter">stop</string>
+</resources>

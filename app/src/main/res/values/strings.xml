@@ -1,17 +1,26 @@
 <resources>
     <string name="app_name">QuizzAPP</string>
     <string-array name="theme">
-        <item>Animaux</item>
-        <item>SciencesEtTech</item>
-        <item>Histoire</item>
-        <item>Musique</item>
+        <item>@string/animaux</item>
+        <item>@string/sciences</item>
+        <item>@string/histoire</item>
+        <item>@string/musique</item>
     </string-array>
+
+    //ActivityChoice
+    <string name="Jouer">jouer</string>
+    <string name="PseudoRequis">Entrez votre pseudo.</string>
+    <string name="Difficulte">Difficultés</string>
+    <string name="Theme" translatable="false">Themes</string>
+    <string name="PseudoManquant">Veuillez entrer un pseudo.</string>
 
     //Réponse
     <string name="vrai">VRAI</string>
     <string name="faux">FAUX</string>
+    <string name="suivant">Suivant </string>
 
     <string name="BravoFAUX">Bravo, la bonne réponse était FAUX.</string>
+
     <string name="DommageVRAI">Dommage, la bonne réponse était VRAI.</string>
 
     <string name="BravoVRAI">Bravo, la bonne réponse était VRAI.</string>
@@ -28,9 +37,9 @@
     <string name="histoire">Histoire</string>
     <string name="musique">Musique</string>
 
+    //QUESTION DU QUIZZ
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////// QUESTION DU QUIZZ
-    ///////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////// A N I M A U X //////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     //Questions pour le Thème Animaux avec la difficulté facile
@@ -77,7 +86,7 @@
     <string name="AD3Ex">En mars et avril, les manchots avancent en longues files vers leurs lieux de nidification qui se trouve parfois à plus de 100 km (60 mi) de leurs lieux de pêche.</string>
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////// S C I E N C E ET T E C H //////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     //Questions pour le Thème ScienceEtTech avec la difficulté facile
@@ -124,7 +133,7 @@
     <string name="SD3Ex">Selon la légende, « eurêka » est le cri de joie poussé par le savant grec Archimède lorsqu’il a compris que « tout corps plongé dans un fluide au repos subit une force verticale dirigée vers le haut et dont l’intensité est égale au poids du volume de fluide déplacé ». Cette loi est appelée « poussée d’Archimède ».</string>
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////// H I S T O I R E //////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     //Questions pour le Thème Histoire avec la difficulté facile
@@ -171,7 +180,7 @@
     <string name="HD3Ex">La chute de l’Empire romain, en 476, marque le début du Moyen Âge.</string>
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////// M U S I Q U E //////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     //Questions pour le Thème Musique avec la difficulté facile
@@ -217,13 +226,17 @@
     <string name="MD3E">Ray Charles est né aveugle, ce qui a beaucoup compliqué son enfance.</string>
     <string name="MD3Ex">"Ray Charles n'est devenu complètement aveugle que vers l\'âge de sept ans. Les médecins présumaient qu’il souffrait d’un glaucome juvénile."</string>
 
-
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     //Score
-
     <string name="_3of3">Bravo, vous avez correctement répondu aux 3 questions</string>
     <string name="_2of3">Pas mal, vous avez correctement répondu à 2 questions sur 3</string>
     <string name="_1of3">Peu mieux faire, vous avez correctement répondu à 1 question sur 3</string>
     <string name="_0of3">Dommage, vous n\'avez pas correctement répondu aux 3 questions</string>
+    <string name="quitter">quitter</string>
+
+    //Règles
+    <string name="rules">Bienvenue sur notre jeu QuizzAPP, les règles sont simples. Choisissez une difficulté et un thème, ensuite une série de questions vous sera posée. Amusez-vous Bien !</string>
+    <string name="authors">Créer par Thomas LY et Anthony PERRET</string>
 
 </resources>

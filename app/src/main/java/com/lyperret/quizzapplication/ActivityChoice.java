@@ -21,18 +21,15 @@ import android.widget.Toast;
 
 public class ActivityChoice extends AppCompatActivity {
 
-    String difficulte="Facile";
+    String difficulte="Facile"; //Thème facile sélectionné de base
     String themeChoisi;
-
 
     @SuppressLint("SourceLockedOrientationActivity")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_activity_choice);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
 
         //création de la liste déroulante pour les thèmes
         final Spinner spinner = findViewById(R.id.spinnerTheme);
@@ -45,15 +42,11 @@ public class ActivityChoice extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selectedItemText = (String) parent.getItemAtPosition(position);
-                // Notify the selected item text
-
                 themeChoisi = selectedItemText;
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
+            public void onNothingSelected(AdapterView<?> adapterView) {}
         });
 
         //Passe à l'activité ActivityPlay
@@ -64,7 +57,7 @@ public class ActivityChoice extends AppCompatActivity {
             public void onClick(View view) {
                 EditText pseudo = findViewById(R.id.pseudo);
                 if (pseudo.getText().toString().equals("")) {
-                    Toast.makeText(getApplicationContext(),"Veuillez entrer un pseudo.",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),getString(R.string.PseudoManquant),Toast.LENGTH_SHORT).show();
                 } else {
                     Intent intent = new Intent(ActivityChoice.this, ActivityPlay.class);
                     intent.putExtra("difficulte",difficulte);

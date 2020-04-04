@@ -10,16 +10,29 @@
 
     <TextView
         android:id="@+id/question"
-        android:layout_width="339dp"
-        android:layout_height="100dp"
+        android:layout_width="343dp"
+        android:layout_height="76dp"
         android:fontFamily="@font/tommy_soft_reg_out"
         android:text="TextView"
-        android:textColor="#000000"
+        android:textColor="@color/textColorBlack"
+        android:textSize="20sp"
         app2:layout_constraintBottom_toBottomOf="parent"
         app2:layout_constraintEnd_toEndOf="parent"
         app2:layout_constraintStart_toStartOf="parent"
         app2:layout_constraintTop_toTopOf="parent"
-        app2:layout_constraintVertical_bias="0.178" />
+        app2:layout_constraintVertical_bias="0.083" />
+
+    <Button
+        android:id="@+id/btnVrai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="92dp"
+        android:fontFamily="@font/tommy_soft_black_out"
+        android:text="VRAI"
+        app2:layout_constraintBottom_toBottomOf="parent"
+        app2:layout_constraintEnd_toEndOf="parent"
+        app2:layout_constraintTop_toBottomOf="@+id/question"
+        app2:layout_constraintVertical_bias="0.925" />
 
     <Button
         android:id="@+id/btnFaux"
@@ -29,22 +42,10 @@
         android:text="FAUX"
         app2:layout_constraintBottom_toBottomOf="parent"
         app2:layout_constraintEnd_toStartOf="@+id/btnVrai"
-        app2:layout_constraintHorizontal_bias="0.659"
+        app2:layout_constraintHorizontal_bias="0.678"
         app2:layout_constraintStart_toStartOf="parent"
         app2:layout_constraintTop_toBottomOf="@+id/question"
-        app2:layout_constraintVertical_bias="0.789" />
-
-    <Button
-        android:id="@+id/btnVrai"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="88dp"
-        android:fontFamily="@font/tommy_soft_black_out"
-        android:text="VRAI"
-        app2:layout_constraintBottom_toBottomOf="parent"
-        app2:layout_constraintEnd_toEndOf="parent"
-        app2:layout_constraintTop_toBottomOf="@+id/question"
-        app2:layout_constraintVertical_bias="0.789" />
+        app2:layout_constraintVertical_bias="0.925" />
 
     <Button
         android:id="@+id/suivant"
@@ -52,25 +53,34 @@
         android:layout_height="46dp"
         android:drawableRight="@drawable/next"
         android:fontFamily="@font/tommy_soft_black_out"
-        android:text="Suivant "
+        android:text="@string/suivant"
         app2:layout_constraintBottom_toBottomOf="parent"
         app2:layout_constraintEnd_toEndOf="parent"
-        app2:layout_constraintHorizontal_bias="0.879"
+        app2:layout_constraintHorizontal_bias="0.875"
         app2:layout_constraintStart_toStartOf="parent"
         app2:layout_constraintTop_toTopOf="parent"
-        app2:layout_constraintVertical_bias="0.859" />
+        app2:layout_constraintVertical_bias="0.944" />
 
     <TextView
         android:id="@+id/explication"
-        android:layout_width="340dp"
-        android:layout_height="239dp"
+        android:layout_width="341dp"
+        android:layout_height="354dp"
         android:fontFamily="@font/tommy_soft_reg_out"
         android:text="TextView"
-        android:textColor="#000000"
+        android:textColor="@color/textColorBlack"
+        android:textSize="20sp"
         app2:layout_constraintBottom_toBottomOf="parent"
         app2:layout_constraintEnd_toEndOf="@+id/question"
         app2:layout_constraintHorizontal_bias="0.0"
         app2:layout_constraintStart_toStartOf="@+id/question"
         app2:layout_constraintTop_toTopOf="parent"
-        app2:layout_constraintVertical_bias="0.557" />
+        app2:layout_constraintVertical_bias="0.614" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app2:layout_constraintGuide_begin="134dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
+        //Lance ActivityChoice lorsque l'utilisateur clique sur le bouton "Start"
         Button BTN_Start = findViewById(R.id.Btn_Start);
         BTN_Start.setOnClickListener(new View.OnClickListener() {
             //Passe sur l'activité ActivityChoice lorsqu'on clique sur le Boutton "START"
