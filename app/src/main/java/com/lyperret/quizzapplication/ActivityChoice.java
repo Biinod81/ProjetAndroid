@@ -95,19 +95,16 @@ public class ActivityChoice extends AppCompatActivity {
             case R.id.radioButton_facile:
                 if(checked){
                     this.difficulte = "Facile";
-                    Toast.makeText(getApplicationContext(),"Vous avez choisis la difficulté : "+difficulte,Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.radioButton_moyen:
                 if(checked){
                     this.difficulte = "Moyen";
-                    Toast.makeText(getApplicationContext(),"Vous avez choisis la difficulté : "+difficulte,Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.radioButton_difficile:
                 if(checked){
                     this.difficulte = "Difficile";
-                    Toast.makeText(getApplicationContext(),"Vous avez choisis la difficulté : "+difficulte,Toast.LENGTH_SHORT).show();
                 }
                 break;
             default:
