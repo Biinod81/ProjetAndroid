@@ -35,6 +35,7 @@ public class ActivityScore extends AppCompatActivity {
         textScore = findViewById(R.id.textScore);
         progressBar = findViewById(R.id.progressBar);
 
+        //Barre de progression
         if(scoreExtra==3){
             textScore.setText(getString(R.string._3of3));
             progressBar.setProgress(100);
@@ -52,6 +53,7 @@ public class ActivityScore extends AppCompatActivity {
             progressBar.setProgress(0);
         }
 
+        //retour à ActivityChoice
         home = findViewById(R.id.BTN_Home);
         home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +63,8 @@ public class ActivityScore extends AppCompatActivity {
                 finish();
             }
         });
+
+        //Quitte l'appli
         quitter = findViewById(R.id.BTN_Quitter);
         quitter.setOnClickListener(new View.OnClickListener() {
             @Override
